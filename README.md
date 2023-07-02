@@ -1,2 +1,3 @@
-This is ocr client.\n
+This is ocr client.
+
 We use 'React' to develop this client.
