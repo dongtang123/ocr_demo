@@ -20,7 +20,7 @@ class ProcessModel:
         self.model = VisionEncoderDecoderModel.from_pretrained(model_path).to(self.device)
 
     def process_image(self, image_path):
-        image = Image.open(image_path)
+        image = Image.open(image_path).convert("RGB")
         pixel_values = self.processor(image, return_tensors="pt").pixel_values
 
         outputs = self.model.generate(
